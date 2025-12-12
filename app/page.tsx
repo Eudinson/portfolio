@@ -41,7 +41,7 @@ export default function Home() {
   }, []);
 
   const stats = [
-    { icon: Clock, value: '5+ Years', label: 'Experience' },
+    { icon: Clock, value: '6+ Years', label: 'Experience' },
     { icon: Code, value: 'Full Stack', label: 'Development' },
     { icon: Users, value: 'Cloud & DevOps', label: 'Expertise' },
     { icon: Star, value: 'Modern Web', label: 'Architecture' },
