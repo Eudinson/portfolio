@@ -359,7 +359,7 @@ export default function Home() {
                 { title: 'Simple To-do List App', desc: 'Web app that allows user to add, edit, update, and delete task. Developed using React.js.', link: 'https://eudinson.github.io/todo-app-local-storage/', tech: ['React.js', 'CSS'] },
                 { title: 'Ecommerce Demo Shop', desc: 'A demo e-commerce website showcasing product listings and basic user interaction features with Google OAuth authentication.', link: 'https://demo-shop-by-eudin.netlify.app/', tech: ['React.js', 'Google OAuth'] },
                 { title: 'Play-A-Maze', desc: 'A WordPress-based semi e-commerce website that showcases detailed information about the company and its products.', link: 'https://plmaze.com/', tech: ['WordPress'] },
-                { title: 'QPI Technical Services LLC', desc: 'A WordPress website designed to showcase company information, featuring integrated WhatsApp support.', link: 'https://qpi.ae/', tech: ['WordPress', 'WhatsApp'] },
+                { title: 'QPI Technical Services LLC', desc: 'A WordPress website designed to showcase company information, featuring integrated WhatsApp support.', link: 'https://qpi.netlify.app/', tech: ['WordPress', 'WhatsApp'] },
                 { title: 'Bible Quiz Game', desc: 'A fun and interactive Bible quiz game developed using C# WinForms with SQLite for local data storage.', link: 'https://eudinson.github.io/Bible-Quiz-Game/', tech: ['C#', 'WinForms', 'SQLite'] },
                 { title: 'CGMI Church', desc: 'A WordPress website developed for a local church, featuring service information, upcoming events, media content, and contact details.', link: 'https://churchcgmi.com/', tech: ['WordPress'] },
               ].map((project, idx) => (
