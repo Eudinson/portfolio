@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Mail, Github, Linkedin, ExternalLink, Briefcase, Code, Award, Menu, X, Star, Users, Clock, Phone, MapPin } from 'lucide-react';
+import { Mail, Github, Linkedin, ExternalLink, Briefcase, Code, Award, Menu, X, Star, Users, Clock, Phone, MapPin, Server, Database, Cloud, Zap, Shield, Wrench } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -16,7 +16,7 @@ export default function Home() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
 
-      const sections = ['about', 'experience', 'projects', 'contact'];
+      const sections = ['about', 'services', 'experience', 'projects', 'contact'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -47,6 +47,106 @@ export default function Home() {
     { icon: Star, value: 'Modern Web', label: 'Architecture' },
   ];
 
+  const services = [
+    {
+      icon: Code,
+      title: 'Web Application Development',
+      items: [
+        'Custom web application development (React, TypeScript, Node.js)',
+        'Single Page Applications (SPA)',
+        'Enterprise dashboards and internal systems',
+        'Responsive, modern UI using Material UI (MUI)',
+      ]
+    },
+    {
+      icon: Server,
+      title: 'Backend & API Development',
+      items: [
+        'RESTful API design and development',
+        'Secure authentication and authorization (JWT)',
+        'Real-time features using Socket.IO',
+        'Third-party API integrations',
+      ]
+    },
+    {
+      icon: Briefcase,
+      title: 'System Development & Architecture',
+      items: [
+        'End-to-end system design and implementation',
+        'Scalable and modular backend architectures',
+        'Business systems (CRM, ERP, workflow tools)',
+      ]
+    },
+    {
+      icon: Database,
+      title: 'Database Services',
+      items: [
+        'Database design and schema architecture',
+        'PostgreSQL and SQL Server development',
+        'Database migration and data transformation',
+        'Query optimization and performance tuning',
+      ]
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud Deployment & DevOps (Azure)',
+      items: [
+        'Application deployment and environment setup',
+        'Azure cloud infrastructure configuration',
+        'CI/CD pipeline setup',
+        'Production, staging, and development environments',
+      ]
+    },
+    {
+      icon: Zap,
+      title: 'AI Automation & Integration',
+      items: [
+        'AI-powered feature integration',
+        'Chatbots and AI assistants',
+        'Business process automation using AI',
+        'Integration of AI services into existing systems',
+      ]
+    },
+    {
+      icon: Code,
+      title: 'WordPress & CMS Solutions',
+      items: [
+        'Custom WordPress development',
+        'Headless WordPress with React frontends',
+        'WordPress performance and security optimization',
+        'Website migration and modernization',
+      ]
+    },
+    {
+      icon: Wrench,
+      title: 'System Modernization & Refactoring',
+      items: [
+        'Legacy system modernization',
+        'Frontend and backend refactoring',
+        'Performance and scalability improvements',
+        'Technical debt reduction',
+      ]
+    },
+    {
+      icon: Shield,
+      title: 'Security & Authentication',
+      items: [
+        'Secure authentication systems (JWT)',
+        'Role-based access control',
+        'API security best practices',
+      ]
+    },
+    {
+      icon: Users,
+      title: 'Ongoing Support & Consulting',
+      items: [
+        'Technical consulting and architecture review',
+        'MVP development for startups',
+        'Maintenance, support, and feature enhancements',
+      ]
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 overflow-hidden">
       <div className="fixed inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
@@ -71,7 +171,7 @@ export default function Home() {
             </div>
 
             <div className="hidden md:flex gap-6">
-              {['about', 'experience', 'projects', 'contact'].map((section) => (
+              {['about', 'services', 'experience', 'projects', 'contact'].map((section) => (
                 <a
                   key={section}
                   href={`#${section}`}
@@ -104,7 +204,7 @@ export default function Home() {
           />
           <div className="absolute top-14 right-4 w-36 bg-white dark:bg-slate-950 rounded border border-slate-200 dark:border-slate-800 shadow-sm">
             <div className="py-1">
-              {['about', 'experience', 'projects', 'contact'].map((section) => (
+              {['about', 'services', 'experience', 'projects', 'contact'].map((section) => (
                 <a
                   key={section}
                   href={`#${section}`}
@@ -148,7 +248,7 @@ export default function Home() {
               </p>
               <div className="flex flex-wrap gap-2 pt-2">
                 <Button size="sm" className="gap-1.5 bg-slate-900 hover:bg-slate-800 dark:bg-slate-100 dark:hover:bg-slate-200 dark:text-slate-900" asChild>
-                  <a href="mailto:eudinson_uy29@yahoo.com">
+                  <a href="mailto:eudinson19@gmail.com">
                     <Mail className="h-3.5 w-3.5" />
                     Contact
                   </a>
@@ -204,6 +304,59 @@ export default function Home() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </section>
+
+        <section id="services" className="py-12">
+          <div className="space-y-8">
+            <div className="space-y-1">
+              <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
+                Services I Offer
+              </h3>
+              <p className="text-sm text-slate-500 dark:text-slate-400">
+                Comprehensive solutions for modern web development
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-4">
+              {services.map((service, idx) => (
+                <Card key={idx} className="border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition-colors">
+                  <CardHeader className="pb-3">
+                    <div className="flex items-start gap-3">
+                      <div className="w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-900 flex items-center justify-center flex-shrink-0">
+                        <service.icon className="h-4 w-4 text-slate-700 dark:text-slate-300" />
+                      </div>
+                      <div>
+                        <CardTitle className="text-base font-semibold text-slate-900 dark:text-slate-100">
+                          {service.title}
+                        </CardTitle>
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="pt-0">
+                    <ul className="space-y-1.5 text-sm text-slate-600 dark:text-slate-400">
+                      {service.items.map((item, itemIdx) => (
+                        <li key={itemIdx} className="flex gap-2 items-start">
+                          <span className="text-slate-400 dark:text-slate-600 mt-1.5">•</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <Card className="border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900">
+              <CardContent className="p-6 text-center">
+                <p className="text-sm text-slate-600 dark:text-slate-400">
+                  Looking for a reliable full-stack developer to build, modernize, or scale your system?{' '}
+                  <a href="#contact" className="font-medium text-slate-900 dark:text-slate-100 hover:underline">
+                    Let's talk.
+                  </a>
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </section>
 
@@ -359,7 +512,7 @@ export default function Home() {
                 { title: 'Simple To-do List App', desc: 'Web app that allows user to add, edit, update, and delete task. Developed using React.js.', link: 'https://eudinson.github.io/todo-app-local-storage/', tech: ['React.js', 'CSS'] },
                 { title: 'Ecommerce Demo Shop', desc: 'A demo e-commerce website showcasing product listings and basic user interaction features with Google OAuth authentication.', link: 'https://demo-shop-by-eudin.netlify.app/', tech: ['React.js', 'Google OAuth'] },
                 { title: 'Play-A-Maze', desc: 'A WordPress-based semi e-commerce website that showcases detailed information about the company and its products.', link: 'https://plmaze.com/', tech: ['WordPress'] },
-                { title: 'QPI Technical Services LLC', desc: 'A WordPress website designed to showcase company information, featuring integrated WhatsApp support.', link: 'https://qpi.netlify.app/', tech: ['WordPress', 'WhatsApp'] },
+                { title: 'QPI Technical Services LLC', desc: 'A WordPress website designed to showcase company information, featuring integrated WhatsApp support.', link: 'https://qpi.netlify.app/', tech: ['NextJs', 'WhatsApp'] },
                 { title: 'Bible Quiz Game', desc: 'A fun and interactive Bible quiz game developed using C# WinForms with SQLite for local data storage.', link: 'https://eudinson.github.io/Bible-Quiz-Game/', tech: ['C#', 'WinForms', 'SQLite'] },
                 { title: 'CGMI Church', desc: 'A WordPress website developed for a local church, featuring service information, upcoming events, media content, and contact details.', link: 'https://churchcgmi.com/', tech: ['WordPress'] },
               ].map((project, idx) => (
@@ -466,9 +619,9 @@ export default function Home() {
                 </p>
                 <div className="flex flex-wrap justify-center gap-2 pt-2">
                   <Button size="sm" className="gap-1.5 bg-slate-900 hover:bg-slate-800 dark:bg-slate-100 dark:hover:bg-slate-200 dark:text-slate-900" asChild>
-                    <a href="mailto:eudinson_uy29@yahoo.com">
+                    <a href="mailto:eudinson19@gmail.com">
                       <Mail className="h-3.5 w-3.5" />
-                      eudinson_uy29@yahoo.com
+                      eudinson19@gmail.com
                     </a>
                   </Button>
                   <Button variant="outline" size="sm" className="gap-1.5" asChild>
@@ -506,6 +659,7 @@ export default function Home() {
             <p>© 2024 Eudinson Uy. All rights reserved.</p>
             <div className="flex gap-4">
               <a href="#about" className="hover:text-slate-900 dark:hover:text-slate-100 transition-colors">About</a>
+              <a href="#services" className="hover:text-slate-900 dark:hover:text-slate-100 transition-colors">Services</a>
               <a href="#experience" className="hover:text-slate-900 dark:hover:text-slate-100 transition-colors">Experience</a>
               <a href="#projects" className="hover:text-slate-900 dark:hover:text-slate-100 transition-colors">Projects</a>
               <a href="#contact" className="hover:text-slate-900 dark:hover:text-slate-100 transition-colors">Contact</a>
