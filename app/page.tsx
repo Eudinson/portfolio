@@ -158,9 +158,8 @@ export default function Home() {
         }}
       />
 
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800' : 'bg-transparent'
-      }`}>
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800' : 'bg-transparent'
+        }`}>
         <div className="max-w-5xl mx-auto px-6 py-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
@@ -175,11 +174,10 @@ export default function Home() {
                 <a
                   key={section}
                   href={`#${section}`}
-                  className={`text-xs font-medium transition-colors ${
-                    activeSection === section
+                  className={`text-xs font-medium transition-colors ${activeSection === section
                       ? 'text-slate-900 dark:text-slate-100'
                       : 'text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100'
-                  }`}
+                    }`}
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
                 </a>
@@ -209,11 +207,10 @@ export default function Home() {
                   key={section}
                   href={`#${section}`}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`block px-3 py-1.5 text-xs font-medium transition-colors ${
-                    activeSection === section
+                  className={`block px-3 py-1.5 text-xs font-medium transition-colors ${activeSection === section
                       ? 'text-slate-900 dark:text-slate-100 bg-slate-50 dark:bg-slate-900'
                       : 'text-slate-600 hover:bg-slate-50 dark:text-slate-400 dark:hover:bg-slate-900 hover:text-slate-900 dark:hover:text-slate-100'
-                  }`}
+                    }`}
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
                 </a>
@@ -235,17 +232,20 @@ export default function Home() {
                 Eudinson Uy
               </h1>
               <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400">
-                Full Stack Web Application Developer & IT Consultant
+                Full-Stack Software Engineer
               </p>
               <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed max-w-lg">
-                Specializing in React.js, Node.js, Express.js, and PostgreSQL. I build scalable, efficient, and user-centric web applications that solve real business needs.
+                Full-Stack Software Engineer experienced in building scalable, production-grade web applications using React.js, TypeScript, Node.js, Express.js, and PostgreSQL.
               </p>
+
               <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed max-w-lg">
-                I'm passionate about emerging technologies, AI-driven automation, and smart digital solutions. I help businesses streamline operations, enhance user experiences, and achieve measurable growth through modern, reliable web systems.
+                I focus on turning complex business requirements into high-performance, maintainable systems, with hands-on experience taking products from concept to production in real-world environments.
               </p>
+
               <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed max-w-lg">
-                I thrive in environments that push innovation, continuous learning, and long-term value creation—turning complex ideas into elegant, high-performance solutions.
+                I am particularly interested in AI-driven automation and modern web platforms, delivering solutions that create measurable business value.
               </p>
+
               <div className="flex flex-wrap gap-2 pt-2">
                 <Button size="sm" className="gap-1.5 bg-slate-900 hover:bg-slate-800 dark:bg-slate-100 dark:hover:bg-slate-200 dark:text-slate-900" asChild>
                   <a href="mailto:eudinson19@gmail.com">
@@ -377,7 +377,7 @@ export default function Home() {
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
                     <div className="space-y-1">
                       <CardTitle className="text-base font-semibold text-slate-900 dark:text-slate-100">
-                        IT Consultant / Full Stack Web Application Developer
+                        Full-Stack Software Engineer
                       </CardTitle>
                       <CardDescription className="text-xs">SSY (Contract) — Remote</CardDescription>
                     </div>
@@ -409,7 +409,7 @@ export default function Home() {
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
                     <div className="space-y-1">
                       <CardTitle className="text-base font-semibold text-slate-900 dark:text-slate-100">
-                        Full Stack Web Application Developer
+                        Full-Stack Software Engineer
                       </CardTitle>
                       <CardDescription className="text-xs">F3O Offshore Services (Contract) — Dubai, UAE</CardDescription>
                     </div>
